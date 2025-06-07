@@ -1,0 +1,21 @@
+body{
+  margin:0;
+  background-color:#F6FD8D;
+}
+h1{
+  margin:0;
+  display:flex;
+  justify-content:center;
+  /*background-color:#f00;*/
+}
+.div_logo_cultura{
+  height:50px;
+  /*background-color:#15baf1;*/
+}
+.conteneur_categorie{
+  margin-top:10px;
+  gap:20px;
+  display:flex;
+  justify-content:center;
+  /*background-color:#0f0;*/
+}
