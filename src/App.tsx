@@ -1,11 +1,8 @@
 import './App.css';
 import { useTranslation,I18nextProvider } from 'react-i18next'
 import i18n from "./core/translation"
+import LoginForm from "./components/LoginForm";
 import Categorie from "./components/Categorie";
-//import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
-//import Card from '@mui/material/Card';
-//import CardContent from '@mui/material/CardContent';
-//import { red } from '@mui/material/colors';
 import {QueryClient,QueryClientProvider} from '@tanstack/react-query';
 import Icon from './components/Icon';
 
@@ -26,7 +23,9 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <I18nextProvider i18n={i18n}>
-        <div className="div_logo_cultura"></div>
+        <div className="div_logo_cultura">
+          <LoginForm data=""/>
+        </div>
         <h1>{t("common:titre")}</h1>
         <div className="conteneur_categorie">
           <Categorie titre={t("common:receptions")} isWarning={true} icon={<Icon name="delivery" size={40} />} description={descriptionReception} />

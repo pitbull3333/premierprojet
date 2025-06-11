@@ -43,4 +43,4 @@ const Categorie = (data:CategorieProps) => {
     </Paper>
   );
 }
-export default Categorie
+export default Categorie;
