@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import { Paper } from '@mui/material';
 import './categorie.css';
 import Icon from "./Icon";
-import { useGetUsers } from '../domains/user/services/queries/use-get-users-query';
 
 type CategorieProps = {
   isWarning:boolean,

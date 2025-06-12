@@ -24,7 +24,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <I18nextProvider i18n={i18n}>
         <div className="div_logo_cultura">
-          <LoginForm data=""/>
+          <LoginForm />
         </div>
         <h1>{t("common:titre")}</h1>
         <div className="conteneur_categorie">
