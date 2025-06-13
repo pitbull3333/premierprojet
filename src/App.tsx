@@ -8,18 +8,16 @@ import Icon from './components/Icon';
 
 const queryClient = new QueryClient();
 
-const descriptionReception = [
-  {id:0,sousTitre:"T",valeur:1},
-  {id:1,sousTitre:"I",valeur:2},
-  {id:2,sousTitre:"D",valeur:3},
-];
-
-const descriptionSensible = [
-  {id:0,sousTitre:"A",valeur:0},
-];
-
 function App() {
   const {t} =  useTranslation();
+  const descriptionReception = [
+    {id:0,sousTitre:t("common:transfert"),valeur:1},
+    {id:1,sousTitre:t("common:interMag"),valeur:2},
+    {id:2,sousTitre:t("common:directCours"),valeur:3},
+  ];
+  const descriptionSensible = [
+  {id:0,sousTitre:t("common:verifier"),valeur:0},
+  ];
   return (
     <QueryClientProvider client={queryClient}>
       <I18nextProvider i18n={i18n}>

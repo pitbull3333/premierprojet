@@ -1,5 +1,10 @@
 {
     "titre":"Bienvenue vunu sur Cultur@log !",
     "receptions":"receptions",
-    "sensibles":"sensibles"
+    "sensibles":"sensibles",
+    "email":"email",
+    "transfert":"Transfert à traiter",
+    "interMag":"Inter Mag à traiter",
+    "directCours":"Direct en cours",
+    "verifier":"A vérifier"
 }
