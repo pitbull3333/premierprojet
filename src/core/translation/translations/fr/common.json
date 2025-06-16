@@ -3,8 +3,8 @@
     "receptions":"receptions",
     "sensibles":"sensibles",
     "email":"email",
-    "transfert":"Transfert à traiter",
-    "interMag":"Inter mag à traiter",
-    "directCours":"Direct en cours",
-    "verifier":"A vérifier"
+    "transfersToValidate":"Transfert à traiter",
+    "interMagasins":"Inter mag à traiter",
+    "directEnCours":"Direct en cours",
+    "sensitiveProductReportsToValidate":"À vérifier"
 }

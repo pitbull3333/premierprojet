@@ -1,20 +1,17 @@
 import {useState,useEffect} from "react";
 import axios, { AxiosError } from "axios";
-type UseTestGetType = {
-  url:string,
-};
-type UseData = {
+type UseDataType = {
   id: number;
   sousTitreKey: string;
   valeur: number;
 };
-export function useApiGet({url}:UseTestGetType){
+export function useApiGet(){
   const [loading,setLoading] = useState(true);
-  const [data,setData] = useState<UseData[]>([]);
+  const [data,setData] = useState<UseDataType[]>([]);
   const [error,setError] = useState<any>(null);
   useEffect(() => {
     axios
-    .get(url)
+    .get("http://127.0.0.1:800/log")
     .then((res) => setData(res.data))
     .catch((err) => handleError(err,setError))
     //.catch((err) => console.log(err))

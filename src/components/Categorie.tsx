@@ -1,25 +1,24 @@
 import type { ReactNode } from 'react';
-import { useTranslation } from 'react-i18next';
+//import { useTranslation } from 'react-i18next';
 import Box from '@mui/material/Box';
 import { Paper } from '@mui/material';
 import './categorie.css';
 import Icon from "./Icon";
 
-type CategorieProps = {
+type CategorieType = {
   isWarning:boolean,
   titre:string,
   icon:ReactNode,
   description:Array<DescriptionType>,
 };
-type DescriptionType ={
+export type DescriptionType ={
  id:number,
  sousTitre:string,
  valeur:number,
 }
 
 //export function Categorie(data:CategorieProps){
-const Categorie = (data:CategorieProps) => {
-  const {t} = useTranslation();
+const Categorie = (data:CategorieType) => {
   const {isWarning,titre,icon,description} = data;
   //const {data:users,error,isFetching} = useGetUsers();
   return (
