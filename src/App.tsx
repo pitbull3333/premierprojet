@@ -28,7 +28,7 @@ function App() {
       sousTitre: t(`common:${key}`),
       valeur: value,
   })) as DescriptionType[];
-  const warningSensible = descriptionReception.some(item => item.valeur > 0);
+  const warningSensible = descriptionSensible.some(item => item.valeur > 0);
   return (
     <QueryClientProvider client={queryClient}>
       <I18nextProvider i18n={i18n}>
