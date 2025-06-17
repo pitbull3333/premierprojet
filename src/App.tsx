@@ -20,6 +20,7 @@ function App() {
       sousTitre: t(`common:${key}`),
       valeur: value,
   })) as DescriptionType[];
+  const warningReception = descriptionReception.some(item => item.valeur > 0);
   const descriptionSensible = Object.entries(logData)
     .filter(([key]) => key === "sensitiveProductReportsToValidate")
     .map(([key, value], index) => ({
@@ -27,6 +28,7 @@ function App() {
       sousTitre: t(`common:${key}`),
       valeur: value,
   })) as DescriptionType[];
+  const warningSensible = descriptionReception.some(item => item.valeur > 0);
   return (
     <QueryClientProvider client={queryClient}>
       <I18nextProvider i18n={i18n}>
@@ -35,8 +37,8 @@ function App() {
         </div>
         <h1>{t("common:titre")}</h1>
         <div className="conteneur_categorie">
-          <Categorie titre={t("common:receptions")} isWarning={true} icon={<Icon name="delivery" size={40} />} description={descriptionReception} />
-          <Categorie titre={t("common:sensibles")} isWarning={false} icon={<Icon name="package-locked" size={40} />} description={descriptionSensible} />
+          <Categorie titre={t("common:receptions")} isWarning={warningReception} icon={<Icon name="delivery" size={40} />} description={descriptionReception} />
+          <Categorie titre={t("common:sensibles")} isWarning={warningSensible} icon={<Icon name="package-locked" size={40} />} description={descriptionSensible} />
         </div>
       </I18nextProvider>
     </QueryClientProvider>
