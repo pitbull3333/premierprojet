@@ -23,3 +23,6 @@ p{
     margin-top:15px;
     /*background-color:red;*/
 }
+.message_error{
+    color:red;
+}

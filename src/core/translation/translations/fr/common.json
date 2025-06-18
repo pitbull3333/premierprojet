@@ -6,5 +6,7 @@
     "transfersToValidate":"Transfert à traiter",
     "interMagasins":"Inter mag à traiter",
     "directEnCours":"Direct en cours",
-    "sensitiveProductReportsToValidate":"À vérifier"
+    "sensitiveProductReportsToValidate":"À vérifier",
+    "errNetwork":"Erreur réseau",
+    "errDefault":"Erreur serveur"
 }

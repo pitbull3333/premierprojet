@@ -12,7 +12,8 @@ const queryClient = new QueryClient();
 
 function App() {
   const {t} =  useTranslation();
-  const { data: logData = {} } = useApiGet();
+  const { data: logData = {}, loading, error } = useApiGet();
+  console.log("error", error);
   const descriptionReception = Object.entries(logData)
     .filter(([key]) => key !== "sensitiveProductReportsToValidate")
     .map(([key, value], index) => ({
@@ -37,8 +38,8 @@ function App() {
         </div>
         <h1>{t("common:titre")}</h1>
         <div className="conteneur_categorie">
-          <Categorie titre={t("common:receptions")} isWarning={warningReception} icon={<Icon name="delivery" size={40} />} description={descriptionReception} />
-          <Categorie titre={t("common:sensibles")} isWarning={warningSensible} icon={<Icon name="package-locked" size={40} />} description={descriptionSensible} />
+          <Categorie titre={t("common:receptions")} isWarning={warningReception} loading={loading} error={error} icon={<Icon name="delivery" size={40} />} description={descriptionReception} />
+          <Categorie titre={t("common:sensibles")} isWarning={warningSensible} loading={loading} error={error} icon={<Icon name="package-locked" size={40} />} description={descriptionSensible} />
         </div>
       </I18nextProvider>
     </QueryClientProvider>

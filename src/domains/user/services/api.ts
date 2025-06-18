@@ -1,5 +1,6 @@
 import {useState,useEffect} from "react";
 import axios, { AxiosError } from "axios";
+import i18n from "../../../core/translation";
 type UseDataType = {
   id: number;
   sousTitreKey: string;
@@ -24,10 +25,10 @@ const handleError = (error:AxiosError,setError:(message:string) => void) => {
   const code = error.code;
   switch(code){
     case "ERR_NETWORK":
-      message = "clé de traduction";
+      message = i18n.t("common:errNetwork");
     break;
     default:
-      message = "Erreur serveur"
+      message = i18n.t("common:errDefault");
   }
   setError(message);
 }

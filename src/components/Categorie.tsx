@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react';
-//import { useTranslation } from 'react-i18next';
 import Box from '@mui/material/Box';
 import { Paper } from '@mui/material';
 import './categorie.css';
@@ -10,6 +9,8 @@ type CategorieType = {
   titre:string,
   icon:ReactNode,
   description:Array<DescriptionType>,
+  loading:boolean,
+  error: string,
 };
 export type DescriptionType ={
  id:number,
@@ -19,7 +20,7 @@ export type DescriptionType ={
 
 //export function Categorie(data:CategorieProps){
 const Categorie = (data:CategorieType) => {
-  const {isWarning,titre,icon,description} = data;
+  const {isWarning,titre,icon,description,loading,error} = data;
   //const {data:users,error,isFetching} = useGetUsers();
   return (
     <Paper elevation={10} sx={{width:"150px",height:"150px",backgroundColor:"white"}}>
@@ -30,7 +31,9 @@ const Categorie = (data:CategorieType) => {
       <div className="sousCategorieBas">
         <h2>{titre}</h2>
         <h3>
-          <div>{description.map((item) => (
+          {loading && <div className="chargement">Chargement...</div>}
+          {error && <div className="message_error">{error}</div>}
+          <div>{!loading && !error && description.map((item) => (
             <p key={item.id}>
               {item.sousTitre} : {item.valeur}
             </p>))}
