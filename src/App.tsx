@@ -13,7 +13,6 @@ const queryClient = new QueryClient();
 function App() {
   const {t} =  useTranslation();
   const { data: logData = {}, loading, error } = useApiGet();
-  console.log("error", error);
   const descriptionReception = Object.entries(logData)
     .filter(([key]) => key !== "sensitiveProductReportsToValidate")
     .map(([key, value], index) => ({

@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import { Paper } from '@mui/material';
 import './categorie.css';
 import Icon from "./Icon";
+import Loading from "./CircularProgress";
 
 type CategorieType = {
   isWarning:boolean,
@@ -31,7 +32,7 @@ const Categorie = (data:CategorieType) => {
       <div className="sousCategorieBas">
         <h2>{titre}</h2>
         <h3>
-          {loading && <div className="chargement">Chargement...</div>}
+          {loading && <Loading size={30} sx={{ p: 0.3 }} />}
           {error && <div className="message_error">{error}</div>}
           <div>{!loading && !error && description.map((item) => (
             <p key={item.id}>
