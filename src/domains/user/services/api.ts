@@ -12,7 +12,7 @@ export function useApiGet(){
   const [error,setError] = useState<any>(null);
   useEffect(() => {
     axios
-    .get("http://127.0.0.1:800/log")
+    .get("http://127.0.0.1:800/log",{ timeout:5000 })
     .then((res) => setData(res.data))
     .catch((err) => handleError(err,setError))
     //.catch((err) => console.log(err))

@@ -6,22 +6,16 @@ h2,h3{
 }
 h2{
     font-size:15px;
-    /*font-weight:600;*/
-    /*background-color:yellow;*/
 }
 h3{
     margin-top:3px;
-    /*border-top-left-radius:inherit;
-    border-top-right-radius:inherit;*/
     font-size:11px;
-    /*background-color:violet;*/
 }
 p{
     margin:0;
 }
 .sousCategorieBas{
     margin-top:15px;
-    /*background-color:red;*/
 }
 .message_error{
     color:red;

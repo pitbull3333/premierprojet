@@ -1,7 +1,9 @@
 {
-    "titre":"Bienvenue vunu sur Cultur@log !",
+    "titre":"Bienvenue venu sur Cultur@log !",
     "receptions":"receptions",
     "sensibles":"sensibles",
+    "trieEtiquetage":"Trie & étiquetage",
+    "prisme":"Prisme",
     "email":"email",
     "transfersToValidate":"Transfert à traiter",
     "interMagasins":"Inter mag à traiter",

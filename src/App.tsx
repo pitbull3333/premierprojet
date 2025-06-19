@@ -7,6 +7,9 @@ import { QueryClient,QueryClientProvider } from '@tanstack/react-query';
 import Icon from './components/Icon';
 import { useApiGet } from './domains/user/services/api';
 import type { DescriptionType } from './components/Categorie';
+//import SvgIcon from '@mui/material/SvgIcon';
+import LogoCultura from './assets/logo-culturalog.svg';
+//import { ReactComponent as LogoCultura } from './assets/logo-culturalog.svg';
 
 const queryClient = new QueryClient();
 
@@ -33,13 +36,17 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <I18nextProvider i18n={i18n}>
         <div className="div_logo_cultura">
-          <LoginForm />
+          <img src={LogoCultura} alt="Logo Cultura" width={160} height={80} />
+          {/*<LogoCultura width={160} height={80} />*/}
         </div>
         <h1>{t("common:titre")}</h1>
         <div className="conteneur_categorie">
           <Categorie titre={t("common:receptions")} isWarning={warningReception} loading={loading} error={error} icon={<Icon name="delivery" size={40} />} description={descriptionReception} />
           <Categorie titre={t("common:sensibles")} isWarning={warningSensible} loading={loading} error={error} icon={<Icon name="package-locked" size={40} />} description={descriptionSensible} />
+          <Categorie titre={t("common:trieEtiquetage")} isWarning={false} loading={false} error={null} icon={<Icon name="label" size={40} />} description={[]} />
+          <Categorie titre={t("common:prisme")} isWarning={false} loading={false} error={null} icon={<Icon name="scanner" size={40} />} description={[]} />
         </div>
+        <LoginForm />
       </I18nextProvider>
     </QueryClientProvider>
   )

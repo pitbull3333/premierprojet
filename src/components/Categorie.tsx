@@ -11,7 +11,7 @@ type CategorieType = {
   icon:ReactNode,
   description:Array<DescriptionType>,
   loading:boolean,
-  error: string,
+  error: string | null,
 };
 export type DescriptionType ={
  id:number,
@@ -25,7 +25,7 @@ const Categorie = (data:CategorieType) => {
   //const {data:users,error,isFetching} = useGetUsers();
   return (
     <Paper elevation={10} sx={{width:"150px",height:"150px",backgroundColor:"white"}}>
-      <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",height:"50%",position:"relative",borderTopLeftRadius:"inherit",borderTopRightRadius:"inherit",backgroundColor:isWarning ? "#ffe0b2":"lightblue"}}>
+      <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",height:"50%",position:"relative",borderTopLeftRadius:"inherit",borderTopRightRadius:"inherit",backgroundColor:isWarning ? "#ffefcd":"#eaf5ff"}}>
         {icon}
         {isWarning && (<Icon name={"warning-filled"} style={{ position:"absolute",left:"50%",bottom:0,transform:"translate(-50%,50%)",color:"#e38700",borderRadius:"50%",border:"3px solid white" }} />)}
       </Box>
