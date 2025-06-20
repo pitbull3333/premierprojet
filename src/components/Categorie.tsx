@@ -34,10 +34,11 @@ const Categorie = (data:CategorieType) => {
         <h3>
           {loading && <Loading size={30} sx={{ p: 0.3 }} />}
           {error && <div className="message_error">{error}</div>}
-          <div>{!loading && !error && description.map((item) => (
-            <p key={item.id}>
-              {item.sousTitre} : {item.valeur}
-            </p>))}
+          <div>
+            {!loading && !error && description.map((item) => (
+              <p key={item.id}>
+                {item.sousTitre} : {item.valeur}
+              </p>))}
           </div>
         </h3>
         {/*<div>{users?.map((user:any) => {return <p key={user.name}>{user.name}</p>})}</div>*/}

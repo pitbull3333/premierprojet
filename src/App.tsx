@@ -35,9 +35,12 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <I18nextProvider i18n={i18n}>
+        <h4>{t("common:culturaLog")}</h4>
         <div className="div_logo_cultura">
-          <img src={LogoCultura} alt="Logo Cultura" width={160} height={80} />
+          <img src={LogoCultura} alt="Logo Cultura" width={160} height={30} />
           {/*<LogoCultura width={160} height={80} />*/}
+          <div className="toto"><Icon name={"setting"} size={15} style={{color:"white",paddingRight:"5px"}} />{t("common:parametrages")}</div>
+          <div><Icon name={"map"} size={15} style={{color:"white"}} /></div>
         </div>
         <h1>{t("common:titre")}</h1>
         <div className="conteneur_categorie">
