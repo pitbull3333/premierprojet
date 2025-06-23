@@ -23,11 +23,11 @@ h4{
   background-color:#243356;
 }
 .div_logo_cultura{
-  height:50px;
+  height:65px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  border-bottom-right-radius:20px;
+  border-bottom-right-radius:25px;
   background-image:linear-gradient(to right,#00bbf0 0%,#5671e0 100%);
 }
 .img_logo_cultura{
@@ -35,13 +35,32 @@ h4{
   padding-left:30px;
 }
 .div_setting{
+  display:flex;
+  align-items:center;
   padding-right:30px;
   color:white;
+  /*background-color:red;*/
 }
 .span_setting{
   padding-left:5px;
-  display:inline-block;
+  /*display:inline-block;
+  vertical-align:4px;*/
   font-size:15px;
+  /*background-color:yellow;*/
+}
+.div_user{
+  padding-top:20px;
+  display:flex;
+  padding-left:5px;
+  /*background-color:green;*/
+}
+.div_text_user{
+  padding-left:5px;
+  font-size:15px;
+  /*background-color:blueviolet;*/
+}
+.span_text_decoonnexin{
+  font-size:14px;
 }
 .conteneur_categorie{
   padding-top:20px;
@@ -49,10 +68,4 @@ h4{
   display:flex;
   justify-content:center;
   background-image: linear-gradient(to bottom, #eee 0%, #fff 50%);
-}
-#span_parametrages{
-  vertical-align:4px;
-}
-#span_magasin{
-  vertical-align:4px;
 }

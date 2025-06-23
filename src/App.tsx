@@ -40,10 +40,14 @@ function App() {
           <img className="img_logo_cultura" src={LogoCultura} alt="Logo Cultura" />
           {/*<LogoCultura width={160} height={80} />*/}
           <div className="div_setting">
-            <Icon name={"setting"} size={15} style={{color:"white",paddingRight:"0px"}} />
-            <span className="span_setting" id="span_parametrages">{t("common:parametrages")}</span>
+            <Icon name={"setting"} size={15} style={{color:"white"}} />
+            <span className="span_setting">{t("common:parametrages")}</span>
             <Icon name={"map"} size={15} style={{color:"white",paddingLeft:"20px"}} />
-            <span className="span_setting" id="span_magasin">{t("common:magasin")}</span>
+            <span className="span_setting">{t("common:magasin")}</span>
+            <div className="div_user">
+              <Icon name={"profil"} size={15} style={{color:"white",paddingLeft:"20px"}} />
+              <div className="div_text_user"><span>{t("common:user")}</span><br /><span className="span_text_decoonnexin">{t("common:deconnexion")}</span></div>
+            </div>
           </div>
         </div>
         <h1>{t("common:titre")}</h1>
