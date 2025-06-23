@@ -37,10 +37,14 @@ function App() {
       <I18nextProvider i18n={i18n}>
         <h4>{t("common:culturaLog")}</h4>
         <div className="div_logo_cultura">
-          <img src={LogoCultura} alt="Logo Cultura" width={160} height={30} />
+          <img className="img_logo_cultura" src={LogoCultura} alt="Logo Cultura" />
           {/*<LogoCultura width={160} height={80} />*/}
-          <div className="toto"><Icon name={"setting"} size={15} style={{color:"white",paddingRight:"5px"}} />{t("common:parametrages")}</div>
-          <div><Icon name={"map"} size={15} style={{color:"white"}} /></div>
+          <div className="div_setting">
+            <Icon name={"setting"} size={15} style={{color:"white",paddingRight:"0px"}} />
+            <span className="span_setting" id="span_parametrages">{t("common:parametrages")}</span>
+            <Icon name={"map"} size={15} style={{color:"white",paddingLeft:"20px"}} />
+            <span className="span_setting" id="span_magasin">{t("common:magasin")}</span>
+          </div>
         </div>
         <h1>{t("common:titre")}</h1>
         <div className="conteneur_categorie">
