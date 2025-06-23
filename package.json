@@ -1,10 +1,11 @@
 {
   "name": "premierprojet",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.203.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "preprod": "vite --mode preproduction",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"

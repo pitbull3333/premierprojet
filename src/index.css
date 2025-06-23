@@ -1,5 +1,20 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins/Poppins-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins/Poppins-ExtraBold.ttf') format('ttf');
+  font-weight:800;
+  font-style: normal;
+}
 body{
   margin:0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
 }
 h1{
   margin:0;
@@ -8,7 +23,7 @@ h1{
   justify-content:center;
   align-items:center;
   font-size:25px;
-  font-family:Arial;
+  font-weight:800;
   color:#064884;
 }
 h4{
@@ -18,9 +33,12 @@ h4{
   display:flex;
   align-items:center;
   font-size:10px;
-  font-family:Arial;
   color:white;
   background-color:#243356;
+}
+.version{
+  padding-left:15px;
+  padding-right:15px;
 }
 .div_logo_cultura{
   height:65px;

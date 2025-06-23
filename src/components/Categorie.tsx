@@ -27,7 +27,7 @@ const Categorie = (data:CategorieType) => {
     <Paper elevation={10} sx={{width:"150px",height:"150px",backgroundColor:"white"}}>
       <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",height:"50%",position:"relative",borderTopLeftRadius:"inherit",borderTopRightRadius:"inherit",backgroundColor:isWarning ? "#ffefcd":"#eaf5ff"}}>
         {icon}
-        {isWarning && (<Icon name={"warning-filled"} style={{ position:"absolute",left:"50%",bottom:0,transform:"translate(-50%,50%)",color:"#e38700",borderRadius:"50%",border:"3px solid white" }} />)}
+        {isWarning && (<Icon name={"warning-filled"} style={{ position:"absolute",left:"50%",bottom:0,transform:"translate(-50%,50%)",color:"#f46327",borderRadius:"50%",border:"3px solid white" }} />)}
       </Box>
       <div className="sousCategorieBas">
         <h2>{titre}</h2>

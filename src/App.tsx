@@ -32,10 +32,15 @@ function App() {
       valeur: value,
   })) as DescriptionType[];
   const warningSensible = descriptionSensible.some(item => item.valeur > 0);
+  //console.log(__APP_VERSION__);
   return (
     <QueryClientProvider client={queryClient}>
       <I18nextProvider i18n={i18n}>
-        <h4>{t("common:culturaLog")}</h4>
+        <h4>
+          <span>{t("common:culturaLog")}</span>
+          <span className="version">{__APP_VERSION__}</span>
+          <span>{import.meta.env.MODE}</span>
+        </h4>
         <div className="div_logo_cultura">
           <img className="img_logo_cultura" src={LogoCultura} alt="Logo Cultura" />
           {/*<LogoCultura width={160} height={80} />*/}
