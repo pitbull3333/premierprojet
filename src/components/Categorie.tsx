@@ -24,7 +24,7 @@ const Categorie = (data:CategorieType) => {
   const {isWarning,titre,icon,description,loading,error} = data;
   //const {data:users,error,isFetching} = useGetUsers();
   return (
-    <Paper elevation={10} sx={{width:"150px",height:"150px",backgroundColor:"white"}}>
+    <Paper elevation={10} sx={{width:"200px",height:"175px",backgroundColor:"white"}}>
       <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",height:"50%",position:"relative",borderTopLeftRadius:"inherit",borderTopRightRadius:"inherit",backgroundColor:isWarning ? "#ffefcd":"#eaf5ff"}}>
         {icon}
         {isWarning && (<Icon name={"warning-filled"} style={{ position:"absolute",left:"50%",bottom:0,transform:"translate(-50%,50%)",color:"#f46327",borderRadius:"50%",border:"3px solid white" }} />)}
@@ -41,7 +41,6 @@ const Categorie = (data:CategorieType) => {
               </p>))}
           </div>
         </h3>
-        {/*<div>{users?.map((user:any) => {return <p key={user.name}>{user.name}</p>})}</div>*/}
       </div>
     </Paper>
   );

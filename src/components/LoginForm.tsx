@@ -18,8 +18,8 @@ const LoginForm = () => {
     const {t} =  useTranslation();
     return (
       <Box component="form" onSubmit={handleSubmit(onSubmit)}>
-        <TextField {...register("email")} id="outlined-basic" label={t("common:email")} variant="outlined" size="small" sx={{marginTop:"10px",marginLeft:"10px"}} />
-        <Button variant="contained" type="submit" sx={{marginTop:"10px",marginLeft:"10px"}}>valider</Button>
+        <TextField {...register("email")} id="outlined-basic" label={t("common:email")} variant="outlined" size="small" />
+        <Button variant="contained" type="submit" sx={{marginLeft:"10px"}}>valider</Button>
       </Box>
     );
 }

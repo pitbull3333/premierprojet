@@ -62,7 +62,10 @@ function App() {
           <Categorie titre={t("common:trieEtiquetage")} isWarning={false} loading={false} error={null} icon={<Icon name="label" size={40} />} description={[]} />
           <Categorie titre={t("common:prisme")} isWarning={false} loading={false} error={null} icon={<Icon name="scanner" size={40} />} description={[]} />
         </div>
-        <LoginForm />
+        <div className="div_form">
+          <LoginForm />
+          <span className="span_reponse_form">a</span>
+        </div>
       </I18nextProvider>
     </QueryClientProvider>
   )
