@@ -16,6 +16,13 @@
   font-weight:800;
   font-style: normal;
 }
+/*@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/Poppins/poppins-v23-latin-regular.woff2') format('woff2');
+}*/
 body{
   margin:0;
   /*font-family: 'Poppins', sans-serif;
